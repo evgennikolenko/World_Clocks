@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/countrySelect.css">
+
+	<!--<script src="script/jquery.js"></script>-->
+
+</head>
+<body>
+<header>
+	<div class="header__title">World Clock</div>
+	<button class="create">create</button>
+</header>
+
+<div class="content">
+	<div class="content__wrapper">
+	<div class="clock__container">
+		<div class="clock">
+			<div class="clock__time">24:00:05</div>
+			<div class="clock__zone-name">Europe/Minsk</div>
+			<div class="clock__memo">Lorem ....</div>
+		</div>
+	</div>
+
+
+
+
+		<form class="create-form">
+			<select class="create-form__select">
+				<option  disabled>Выберите pojas</option>
+				<option class="select__options" data-class-name-z="kiev" data-timeZone="2" data-timeZoneName="Europe/Kiev">KIEV</option>
+				<option class="select__options" data-class-name-z="london" data-timeZone="0" data-timeZoneName="Europe/London">LONDON</option>
+			</select>
+
+
+			<label>
+				<textarea class="create-form__textarea"></textarea>
+			</label>
+
+			<button class="create-form__button">Create</button>
+
+		</form>
+	</div>
+</div>
+
+
+<script src="js/create-clock.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>
