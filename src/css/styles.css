@@ -20,6 +20,17 @@ header{
     background: yellow;
 }
 
+.header__logo{
+    position: absolute;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    top: 25px;
+    left: 45px;
+    background: url("../image/logo.svg") no-repeat;
+    background-size: cover;
+
+}
 .header__title{
     display: inline-block;
     position: absolute;
