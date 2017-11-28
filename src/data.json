@@ -1,0 +1,23 @@
+
+{
+  "data": {
+    "Kiev": {
+      "country" : "Ukraine",
+      "data-timeZone" : "2" ,
+      "data-timeZoneName" : "Europe/Kiev",
+      "data-class-name" : "kiev"
+    },
+    "London": {
+      "country" : "England",
+      "data-timeZone" : "0" ,
+      "data-timeZoneName" : "Europe/London",
+      "data-class-name" : "london"
+    },
+    "Moscow": {
+      "country" : "Russia",
+      "data-timeZone" : "3" ,
+      "data-timeZoneName" : "Asia/Moscow",
+      "data-class-name" : "moscow"
+    }
+  }
+}

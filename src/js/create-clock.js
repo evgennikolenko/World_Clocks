@@ -31,11 +31,15 @@ CreateClock.prototype.getTimeWithZone = function () {
     var strArrayDate =  date.toTimeString(); // строковое время с GMT
     strArrayDate = strArrayDate.split(" ");
 
-    var getTime = strArrayDate[0], //время
-        getGMT = "GMT+0"+this.timeZone+"00"; //пояс
+    var getTime = strArrayDate[0].split(":"), //время hh:mm:ss
+     getHoursAndMinute = getTime[0] +':'+ getTime[1]; // hh::mm
+
+    var getSeconds = getTime[2]; // ss
+    var    getGMT = "GMT+0"+this.timeZone+"00"; //пояс
 
     return {
-        'time' : getTime,
+        'time' : getHoursAndMinute,
+        'seconds' : getSeconds,
         'timeZone': getGMT
     }
 };
@@ -45,11 +49,13 @@ CreateClock.prototype.getTimeWithZone = function () {
 * Строение:
 * div .clock +(classNameCountry)
 *       div .clock__time  ---> time
+*       div .time__seconds  ---> seconds
 *       div .clock__zone-name  ---> zone name ```(Europe/London)
 *       div .clock__memo ---> some text
 */
 CreateClock.prototype.createDom = function () {
-    var clock = '<div class="clock '+  this.classNameCountry+'"><div class="clock__time ">'+this.getTimeWithZone().time+'</div>' +
+    var clock = '<div class="clock '+  this.classNameCountry+'"><div class="clock__time ">'+this.getTimeWithZone().time+'' +
+        '</div>' + '<span class="time__seconds">'+this.getTimeWithZone().seconds+'</span>'+
         '<div class="clock__zone-name">'+this.gmtName+'</div>' +
         '<div class="clock__memo">'+this.inputText+'</div></div>';
     $(".clock__container").append(clock);
