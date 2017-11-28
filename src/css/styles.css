@@ -76,7 +76,7 @@ header{
     margin-left: 2%;
 
 
-    background: tan;
+    /*background: tan;*/
 }
 .clock__header{
     position: absolute;
@@ -87,7 +87,7 @@ header{
     font-size: 23px;
     padding-top: 22px;
     padding-left: 10px;
-    background: royalblue;
+    /*background: royalblue;*/
 }
 
 .clock__time{
@@ -101,7 +101,7 @@ header{
     padding-top: 15px;
     padding-left: 10px;
 
-    background: peru;
+    /*background: peru;*/
 }
 
 .time__seconds{
@@ -115,7 +115,7 @@ header{
     font-family: aMavickFont, sans-serif;
     font-size: 40px;
 
-    background: indianred;
+    /*background: indianred;*/
 }
 
 .clock__zone-name{
@@ -125,7 +125,7 @@ header{
     right: 0;
     top: 75px;
 
-    background: greenyellow;
+    /*background: greenyellow;*/
 }
 
 .clock__get-date{
@@ -138,13 +138,13 @@ header{
     padding-top: 15px;
     padding-left: 10px;
 
-    background: darkslategray;
+    /*background: darkslategray;*/
 }
 
 .clock__memo{
     position: absolute;
     height: 80px;
     width: 100%;
-    background: teal;
+    /*background: teal;*/
     bottom: 0;
 }

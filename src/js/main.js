@@ -53,7 +53,8 @@ window.addEventListener('load', function () {
 
                         var timeZone = key["data-timeZone"],
                             gmtName = key["data-timeZoneName"],
-                            className = key["data-class-name"];
+                            className = key["data-class-name"],
+                            backgroundImg = key["background"];
                     }
                 }
 
@@ -65,8 +66,13 @@ window.addEventListener('load', function () {
         // создание екземпляра
         var createClock = new CreateClock( className, timeZone, gmtName, inputText);
         createClock.createDom();
+        $("."+ className +" .clock__header").text('Current time in '+ getDataAttr  );
+        //
+        $("."+className). css("background", backgroundImg );
+        $("."+className). css("background-size", "cover" );
 
 
+        // '"' + backgroundImg + '"'
 
 
         setInterval(function () {

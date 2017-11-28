@@ -23,12 +23,16 @@ CreateClock.prototype.getTimeWithZone = function () {
     mm = date.getUTCMinutes(),
     ss = date.getUTCSeconds(),
         year = date.getUTCFullYear(),
-        month = date.getUTCDate(),
-        day = date.getUTCDay();
+        day = date.getUTCDate(),
+        month = date.getUTCMonth();
 
     date = new Date(year, month, day, hh, mm, ss);
 
+
+
     var strArrayDate =  date.toTimeString(); // строковое время с GMT
+
+
     strArrayDate = strArrayDate.split(" ");
 
     var getTime = strArrayDate[0].split(":"), //время hh:mm:ss
@@ -40,7 +44,11 @@ CreateClock.prototype.getTimeWithZone = function () {
     return {
         'time' : getHoursAndMinute,
         'seconds' : getSeconds,
-        'timeZone': getGMT
+        'timeZone': getGMT,
+
+        'day' : day,
+        'month' : month,
+        'year' : year
     }
 };
 
@@ -54,8 +62,25 @@ CreateClock.prototype.getTimeWithZone = function () {
 *       div .clock__memo ---> some text
 */
 CreateClock.prototype.createDom = function () {
-    var clock = '<div class="clock '+  this.classNameCountry+'"><div class="clock__time ">'+this.getTimeWithZone().time+'' +
+    function getMonthName(month) {
+        var arr = ["January", "February", "March", "April", "May",
+            "June" , "July", "August", "September", "October", "November", "December"];
+        for(var i = 0; i < arr.length; i++){
+            if(month === i) {
+                return arr[i];
+            }
+        }
+    }
+
+    var day = this.getTimeWithZone().day;
+    var month = getMonthName(this.getTimeWithZone().month);
+    var year = this.getTimeWithZone().year;
+    // Current time in <span class="header__country"> Kiev</span>
+    var clock = '<div class="clock '+  this.classNameCountry+'">'+
+       ' <div class="clock__header"></div>'+
+        '<div class="clock__time ">'+this.getTimeWithZone().time+'' +
         '</div>' + '<span class="time__seconds">'+this.getTimeWithZone().seconds+'</span>'+
+      '  <div class="clock__get-date">'+ day + " " + month + " " + year+'</div>'+
         '<div class="clock__zone-name">'+this.gmtName+'</div>' +
         '<div class="clock__memo">'+this.inputText+'</div></div>';
     $(".clock__container").append(clock);

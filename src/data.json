@@ -5,19 +5,22 @@
       "country" : "Ukraine",
       "data-timeZone" : "2" ,
       "data-timeZoneName" : "Europe/Kiev",
-      "data-class-name" : "kiev"
+      "data-class-name" : "kiev",
+      "background": "url(image/kiev.jpg) no-repeat"
     },
     "London": {
       "country" : "England",
       "data-timeZone" : "0" ,
       "data-timeZoneName" : "Europe/London",
-      "data-class-name" : "london"
+      "data-class-name" : "london",
+      "background": "url(image/london.jpg) no-repeat"
     },
     "Moscow": {
       "country" : "Russia",
       "data-timeZone" : "3" ,
       "data-timeZoneName" : "Asia/Moscow",
-      "data-class-name" : "moscow"
+      "data-class-name" : "moscow",
+      "background": "url(image/moscow.jpg) no-repeat"
     }
   }
 }
