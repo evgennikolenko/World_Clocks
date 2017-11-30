@@ -2,12 +2,11 @@
  * Created by evgennikolenko on 26.11.17.
  */
 
-var CreateClock = function (classNameCountry, timeZone, gmtName, inputText) {
+var CreateClock = function (classNameCountry, timeZone, gmtName) {
 
     this.classNameCountry = classNameCountry; // добавление дополнительного класса с названием города
     this.timeZone = +timeZone; // числовое значение часового пояса
     this.gmtName = gmtName; // GMT
-    this.inputText = inputText; //описание с textarea
 };
 
 /*
@@ -28,18 +27,17 @@ CreateClock.prototype.getTimeWithZone = function () {
 
     date = new Date(year, month, day, hh, mm, ss);
 
-
-
     var strArrayDate =  date.toTimeString(); // строковое время с GMT
-
-
     strArrayDate = strArrayDate.split(" ");
-
     var getTime = strArrayDate[0].split(":"), //время hh:mm:ss
-     getHoursAndMinute = getTime[0] +':'+ getTime[1]; // hh::mm
+     getHoursAndMinute = getTime[0] +':'+ getTime[1]; // hh:mm
+
+    if(getHoursAndMinute === '00:00'){
+        day += 1;
+    }
 
     var getSeconds = getTime[2]; // ss
-    var    getGMT = "GMT+0"+this.timeZone+"00"; //пояс
+    var getGMT = "GMT+0"+this.timeZone+"00"; //пояс
 
     return {
         'time' : getHoursAndMinute,
@@ -81,7 +79,18 @@ CreateClock.prototype.createDom = function () {
         '<div class="clock__time ">'+this.getTimeWithZone().time+'' +
         '</div>' + '<span class="time__seconds">'+this.getTimeWithZone().seconds+'</span>'+
       '  <div class="clock__get-date">'+ day + " " + month + " " + year+'</div>'+
-        '<div class="clock__zone-name">'+this.gmtName+'</div>' +
-        '<div class="clock__memo">'+this.inputText+'</div></div>';
+        '  <div class="clock__weather">'+
+    ' <div class="weather__temp">6 C</div>'+
+    '<img class="weather__image">'+
+    '<div class="weather__wind">17.5</div>'+
+
+    ' <div class="weather__sun">'+
+    ' <div class="sunrise">Sunrise: <span class="sunrise__div">12:35</span></div>'+
+    ' <div class="sunset">Sunset:  <span class="sunset__div">24:00</span></div>'+
+    ' </div>'+
+    ' </div>'+
+        '<div class="clock__zone-name">'+this.gmtName+'</div>';
+
+
     $(".clock__container").append(clock);
 };

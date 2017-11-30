@@ -32,6 +32,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 16px;
+}
+
 header{
     width: 100%;
     height: 150px;
@@ -71,80 +75,178 @@ header{
     display: inline-block;
     position: relative;
     width: 30%;
-    height: 350px;
-   margin-top: 25px;
+    height: 300px;
+    margin-top: 25px;
     margin-left: 2%;
 
+    border: 1px solid dimgrey  ;
+    border-radius: 20px;
 
-    /*background: tan;*/
+    /*overflow: hidden;*/
+
+
+    background: tan;
 }
 .clock__header{
-    position: absolute;
-    width: 100%;
-    height: 75px;
-
+    /*position: absolute;*/
+    display: inline-block;
+    width: 65%;
+    height: 30px;
     font-family: EchoesSans, sans-serif;
-    font-size: 23px;
-    padding-top: 22px;
-    padding-left: 10px;
-    /*background: royalblue;*/
+    font-size: 1.3rem;
+    margin-top: 22px;
+    margin-left: 10px;
+    padding-top: 5px;
+    background: rgba(300,350,350,0.4);
+    border: 1px solid papayawhip;
+    border-radius: 5px;
+    text-align: center;
+
 }
 
 .clock__time{
-    position: absolute;
-    width: 60%;
-    height: 135px;
-    top: 75px;
+    /*position: absolute;*/
+    display: inline-block;
+    width: 62%;
+    height: 95px;
 
     font-family: aMavickFont, sans-serif;
-    font-size: 90px;
-    padding-top: 15px;
-    padding-left: 10px;
+    font-size: 6rem;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    background:  rgba(300,350,350,0.4);
+    border: 1px solid papayawhip;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-right: none;
 
-    /*background: peru;*/
 }
 
 .time__seconds{
     position: absolute;
-    display: block;
+    display: inline-block;
     width: 50px;
-    height: 50px;
-    top:100px;
-    left: 235px;
+    height: 45px;
+    margin-top: 15px;
 
     font-family: aMavickFont, sans-serif;
     font-size: 40px;
+    background:  rgba(300,350,350,0.4);
+    border: 1px solid papayawhip;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
 
-    /*background: indianred;*/
 }
 
 .clock__zone-name{
-    position: absolute;
-    width: 39%;
-    height: 190px;
-    right: 0;
-    top: 75px;
 
-    /*background: greenyellow;*/
+    width: 100%;
+    height: 30px;
+    margin-top: 120px;
+
+    font-family: EchoesSans, sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    background: greenyellow;
 }
 
 .clock__get-date{
- position: absolute;
-    width: 60%;
-    height: 55px;
-    top: 210px;
+    /*position: absolute;*/
+    display: inline-block;
+    width: 50%;
+    height: 20px;
+
+    text-align: center;
+
     font-family: EchoesSans, sans-serif;
     font-size: 18px;
-    padding-top: 15px;
-    padding-left: 10px;
+    margin-left: 35px;
+    background:  rgba(300,350,350,0.4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid papayawhip;
+    border-top: none;
 
-    /*background: darkslategray;*/
 }
 
-.clock__memo{
+.clock__weather{
     position: absolute;
-    height: 80px;
-    width: 100%;
-    /*background: teal;*/
-    bottom: 0;
+    right: 0;
+    height: 70px;
+    width: 60%;
+    background:  rgba(300,350,350,0.4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid papayawhip;
+
+    margin-top: 25px;
+
+}
+
+.weather__temp {
+    width: 15%;
+    padding-top: 15px;
+    height: inherit;
+    float: left;
+    font-family: EchoesSans, sans-serif;
+    font-size: 28px;
+    background: yellow;
+}
+.weather__image{
+    width: 25%;
+    height: inherit;
+    float: left;
+
+    background: red;
+}
+.weather__wind{
+
+    width: 20%;
+    height: inherit;
+    float: left;
+    font-family: EchoesSans, sans-serif;
+    font-size: 18px;
+    padding-top: 24px;
+    background: lightskyblue;
+}
+
+.weather__sun{
+    width: 38%;
+    height: inherit;
+    float: left;
+
+
+    background: sandybrown;
+}
+
+.sunrise{
+    font-family: EchoesSans, sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    height: 14px;
+}
+
+.sunrise__div{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    float: right;
+    margin-top: -2px;
+
+}
+
+.sunset{
+    margin-top: 10px;
+    font-family: EchoesSans, sans-serif;
+    font-size: 14px;
+    height: 14px;
+
+}
+
+.sunset__div{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    float: right;
+    margin-top: -2px;
 }

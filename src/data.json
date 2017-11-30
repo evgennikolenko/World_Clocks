@@ -3,7 +3,7 @@
   "data": {
     "Kiev": {
       "country" : "Ukraine",
-      "data-timeZone" : "2" ,
+      "data-timeZone" : "4" ,
       "data-timeZoneName" : "Europe/Kiev",
       "data-class-name" : "kiev",
       "background": "url(image/kiev.jpg) no-repeat"

@@ -23,11 +23,21 @@
 
 		<!--Current time in <span class="header__country"> Kiev</span>-->
 		<div class="clock">
-			<div class="clock__header"> </div>
+			<div class="clock__header">Current time in Kiev</div>
 			<div class="clock__time">24:00</div><span class="time__seconds">05</span>
-			<div class="clock__zone-name">Europe/Minsk</div>
 			<div class="clock__get-date">25 September 2017</div>
-			<div class="clock__memo">Lorem ....</div>
+			<div class="clock__weather">
+				<div class="weather__temp">6 C</div>
+				<img class="weather__image">
+				<div class="weather__wind">17.5</div>
+
+				<div class="weather__sun">
+					<div class="sunrise">Sunrise: <span class="sunrise__div">12:35</span></div>
+					<div class="sunset">Sunset:  <span class="sunset__div">24:00</span></div>
+				</div>
+			</div>
+			<div class="clock__zone-name">Europe/Minsk</div>
+
 		</div>
 	</div>
 
@@ -54,10 +64,11 @@
 	</div>
 </div>
 
-
+<script src="js/weather.js" type="text/javascript"></script>
 <script src="js/create-clock.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 <script src="js/jquery.js" type="text/javascript"></script>
+
 
 </body>
 </html>
