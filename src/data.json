@@ -1,26 +1,61 @@
 
 {
   "data": {
-    "Kiev": {
-      "country" : "Ukraine",
-      "data-timeZone" : "4" ,
-      "data-timeZoneName" : "Europe/Kiev",
-      "data-class-name" : "kiev",
-      "background": "url(image/kiev.jpg) no-repeat"
-    },
     "London": {
       "country" : "England",
       "data-timeZone" : "0" ,
       "data-timeZoneName" : "Europe/London",
       "data-class-name" : "london",
-      "background": "url(image/london.jpg) no-repeat"
+      "background": "url(image/city/london.jpg) no-repeat"
+    },
+    "Lisbon": {
+      "country" : "Portugal",
+      "data-timeZone" : "0" ,
+      "data-timeZoneName" : "Europe/Lisbon",
+      "data-class-name" : "lisbon",
+      "background": "url(image/city/lisabon.jpg) no-repeat"
+    },
+    "Madrid": {
+      "country" : "Spain",
+      "data-timeZone" : "1" ,
+      "data-timeZoneName" : "Europe/Madrid",
+      "data-class-name" : "madrid",
+      "background": "url(image/city/madrid.jpg) no-repeat"
+    },
+    "Paris": {
+      "country" : "Paris",
+      "data-timeZone" : "1" ,
+      "data-timeZoneName" : "Europe/Paris",
+      "data-class-name" : "paris",
+      "background": "url(image/city/paris.jpg) no-repeat"
+    },
+    "Amsterdam": {
+      "country" : "Netherlands",
+      "data-timeZone" : "1" ,
+      "data-timeZoneName" : "Europe/Amsterdam",
+      "data-class-name" : "amsterdam",
+      "background": "url(image/city/amsterdam.jpg) no-repeat"
+    },
+    "Berlin": {
+      "country" : "Germany",
+      "data-timeZone" : "1" ,
+      "data-timeZoneName" : "Europe/Berlin",
+      "data-class-name" : "berlin",
+      "background": "url(image/city/berlin.jpg) no-repeat"
+    },
+    "Kiev": {
+      "country" : "Ukraine",
+      "data-timeZone" : "2" ,
+      "data-timeZoneName" : "Europe/Kiev",
+      "data-class-name" : "kiev",
+      "background": "url(image/city/kiev.jpg) no-repeat"
     },
     "Moscow": {
       "country" : "Russia",
       "data-timeZone" : "3" ,
       "data-timeZoneName" : "Asia/Moscow",
       "data-class-name" : "moscow",
-      "background": "url(image/moscow.jpg) no-repeat"
+      "background": "url(image/city/moscow.jpg) no-repeat"
     }
   }
 }
