@@ -87,6 +87,17 @@ header{
 
     background: tan;
 }
+
+.clock__close{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: url("../image/close.svg") no-repeat;
+    cursor: pointer;
+}
 .clock__header{
     /*position: absolute;*/
     display: inline-block;

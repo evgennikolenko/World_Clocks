@@ -47,6 +47,7 @@ CreateClock.prototype.getTimeWithZone = function () {
 */
 CreateClock.prototype.createDom = function () {
     var clock = '<div class="clock '+  this.classNameCountry+'">'+
+        '<div class="clock__close"></div>'+
         '<div class="clock__header"></div>'+
         '<div class="clock__time ">'+this.getTimeWithZone().time+'' +
         '</div>'+'<span class="time__seconds">'+this.getTimeWithZone().seconds+'</span>'+
