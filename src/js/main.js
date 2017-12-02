@@ -94,13 +94,21 @@ window.addEventListener('load', function () {
     formButton.addEventListener('click', function (e) {
 
         // select ---> options
-        for ( var i = 0; i < formOptions.length; i++){
-            var option = formOptions[i];
-            if ( option.selected){
-                var getDataAttr = option.getAttribute('data-city-name');
-                break;
-            }
-        }
+        // for ( var i = 0; i < formOptions.length; i++){
+        //     var option = formOptions[i];
+        //     if ( option.selected){
+        //         var getDataAttr = option.getAttribute('data-city-name');
+        //         break;
+        //     }
+        // }
+
+        var city = document.querySelectorAll(".selected-flag");
+        console.log(city[0]);
+        console.log(city[0].title);
+        var str = city[0].title;
+         str = str.split(",");
+         var getDataAttr = str[0];
+        console.log(str[0]);
 
         var searchtext = "select%20*%20from%20weather.forecast%20where%20woeid%20in%20" +
             "(select%20woeid%20from%20geo.places(1)%20where text='" + getDataAttr + "') and u='c'";
