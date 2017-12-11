@@ -4,6 +4,7 @@
 
 var CreateClock = function (classNameCountry, timeZone, gmtName, date) {
     this.classNameCountry = classNameCountry; // добавление дополнительного класса с названием города
+
     this.timeZone = +timeZone; // числовое значение часового пояса
     this.gmtName = gmtName; // GMT
     this.date = date; // GMT

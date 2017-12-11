@@ -14,7 +14,25 @@
 <header>
 	<div class="header__logo"></div>
 	<div class="header__title">World Clock</div>
-	<button class="create">create</button>
+	<div class="control" style="float: right">
+		<button class="create-form__button">Create</button>
+
+
+
+		<div class="wrapp__input__div">
+			<div class="wrapp__input">
+				<input type="text" id="country" />
+				<input type="hidden" id="country_code" />
+
+				<!--js плагин списка стран-->
+				<script src="js/countrySelect.js" type="text/javascript"></script>
+
+				<script>
+                    $("#country").countrySelect();
+				</script>
+			</div>
+		</div>
+	</div>
 </header>
 
 <div class="content">
@@ -41,40 +59,9 @@
 		<!--</div>-->
 
 
-	<!--</div>-->
-		<!--<form class="create-form">-->
-			<!--<select class="create-form__select">-->
-				<!--<option  disabled>Выберите pojas</option>-->
-				<!--<option class="select__options" data-city-name="London">London, UK</option>-->
-				<!--<option class="select__options" data-city-name="Lisbon">Lisbon, Portugal</option>-->
-				<!--<option class="select__options" data-city-name="Madrid">Madrid, Spain</option>-->
-				<!--<option class="select__options" data-city-name="Paris">Paris, Spain</option>-->
-				<!--<option class="select__options" data-city-name="Berlin">Berlin, Germany</option>-->
-				<!--<option class="select__options" data-city-name="Kiev">Kiev, Ukraine</option>-->
-				<!--<option class="select__options" data-city-name="Moscow">Moscow, Russia</option>-->
-			<!--</select>-->
-			<!--<label>-->
-				<!--<textarea class="create-form__textarea"></textarea>-->
-			<!--</label>-->
 
-			<button class="create-form__button">Create</button>
 
-		<!--</form>-->
-	<!--</div>-->
 
-	<div class="wrapp__input__div">
-		<div class="wrapp__input">
-			<input type="text" id="country" />
-			<input type="hidden" id="country_code" />
-
-			<!--js плагин списка стран-->
-			<script src="js/countrySelect.js" type="text/javascript"></script>
-
-			<script>
-                $("#country").countrySelect();
-			</script>
-		</div>
-	</div>
 </div>
 
 	</div>

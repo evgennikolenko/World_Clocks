@@ -56,6 +56,27 @@
       "data-timeZoneName" : "Asia/Moscow",
       "data-class-name" : "moscow",
       "background": "url(image/city/moscow.jpg) no-repeat"
+    },
+    "New Delhi": {
+      "country" : "India",
+      "data-timeZone" : "5.30" ,
+      "data-timeZoneName" : "Asia/New Delhi",
+      "data-class-name" : "new_delhi",
+      "background": "url(image/city/new_delhi.jpg) no-repeat"
+    },
+    "Tel Aviv": {
+      "country" : "Israel",
+      "data-timeZone" : "2" ,
+      "data-timeZoneName" : "Asia/Tel Aviv",
+      "data-class-name" : "tel_aviv",
+      "background": "url(image/city/tel_aviv.jpg) no-repeat"
+    },
+    "Los Angeles": {
+      "country" : "United States",
+      "data-timeZone" : "-8" ,
+      "data-timeZoneName" : "Amerika/Los Angeles",
+      "data-class-name" : "los-angeles",
+      "background": "url(image/city/los_angeles.jpg) no-repeat"
     }
   }
 }

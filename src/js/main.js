@@ -1,6 +1,7 @@
 /**
  * Created by evgennikolenko on 27.11.17.
  * Update 02.12.17. Add LocalStorage and remove items
+ * Update 11.12.17. Сheck for the fact that there are already such hours. Add weather-image.
  */
 
 window.addEventListener('load', function () {
@@ -143,7 +144,6 @@ window.addEventListener('load', function () {
 
             var date = yahoo.lastBuildDate;
             date = date.split(" ").slice(1,4).join(" ");
-
             // создание екземпляра
             var createClock = new CreateClock( className, timeZone, gmtName, date);
             createClock.createDom();

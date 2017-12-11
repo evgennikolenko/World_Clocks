@@ -829,9 +829,9 @@
 		n: "Berlin, Germany (Deutschland)",
 		i: "de"
 	}, {
-		n: "London, England",
-		i: "en"
-	}, {
+	// 	n: "London, England",
+	// 	i: "en"
+	// }, {
 	// 	n: "Gibraltar",
 	// 	i: "gi"
 	// }, {
@@ -880,9 +880,9 @@
 	// 	n: "Iceland (Ísland)",
 	// 	i: "is"
 	// }, {
-	// 	n: "India (भारत)",
-	// 	i: "in"
-	// }, {
+		n: "New Delhi, India",
+		i: "in"
+	}, {
 	// 	n: "Indonesia",
 	// 	i: "id"
 	// }, {
@@ -898,9 +898,9 @@
 	// 	n: "Isle of Man",
 	// 	i: "im"
 	// }, {
-	// 	n: "Israel (‫ישראל‬‎)",
-	// 	i: "il"
-	// }, {
+		n: "Tel Aviv, Israel‎",
+		i: "il"
+	}, {
 	// 	n: "Italy (Italia)",
 	// 	i: "it"
 	// }, {
@@ -1275,16 +1275,16 @@
 	// }, {
 		n: "Kiev, Ukraine",
 		i: "ua"
+	}, {
+        // 	n: "United Arab Emirates (‫الإمارات العربية المتحدة‬‎)",
+        // 	i: "ae"
+        // }, {
+        n: "London, England",
+        i: "gb"
+    }, {
+		n: "Los Angeles, United States",
+		i: "us"
 	}
-	// 	n: "United Arab Emirates (‫الإمارات العربية المتحدة‬‎)",
-	// 	i: "ae"
-	// }, {
-	// 	n: "United Kingdom",
-	// 	i: "gb"
-	// }, {
-	// 	n: "United States",
-	// 	i: "us"
-	// }, {
 	// 	n: "U.S. Minor Outlying Islands",
 	// 	i: "um"
 	// }, {
