@@ -47,7 +47,7 @@ window.addEventListener('load', function () {
 
                  var weather = yahoo.item.condition,
                      temperature = weather.temp,
-                     text = weather.text,
+                     text = weather.text.toLowerCase(),
                      wind = yahoo.wind.speed,
                      sunrise = yahoo.astronomy.sunrise,
                      sunset = yahoo.astronomy.sunset;
@@ -75,6 +75,7 @@ window.addEventListener('load', function () {
                  $("." + className + " .wind-speed__val").text(wind);
                  $("." + className + " .sunrise__div").text(sunrise);
                  $("." + className + " .sunset__div").text(sunset);
+                 $("."+ className +" .weather__image").css("background", "url('image/Weather-icons/"+text+".svg') no-repeat" );
                  //
                  $("." + className).css("background", backgroundImg);
                  $("." + className).css("background-size", "cover");
@@ -101,6 +102,7 @@ window.addEventListener('load', function () {
         var getDataAttr = str[0];
 
 
+        // check for a repeat of the clock
         for( var i in localStorageData) {
             var storageObj = localStorageData[i],storageItem = JSON.parse(storageObj);
             if(getDataAttr === storageItem.className){
@@ -110,7 +112,6 @@ window.addEventListener('load', function () {
                 }
             }
         }
-
 
         var searchtext = "select%20*%20from%20weather.forecast%20where%20woeid%20in%20" +
             "(select%20woeid%20from%20geo.places(1)%20where text='" + getDataAttr + "') and u='c'";
@@ -134,7 +135,8 @@ window.addEventListener('load', function () {
             var weather = yahoo.item.condition;
 
             var temperature = weather.temp,
-                text = weather.text;
+                text = weather.text.toLowerCase();
+            console.log("WWWWW, ", text);
             var wind = yahoo.wind.speed;
             var sunrise = yahoo.astronomy.sunrise,
                 sunset = yahoo.astronomy.sunset;
@@ -161,9 +163,10 @@ window.addEventListener('load', function () {
             $("."+ className +" .clock__header").text('Current time in '+ getDataAttr  );
 
             $("."+ className +" .weather__temp").text(temperature + ' °C');
+            $("."+ className +" .sunset__div").text(sunset);
             $("."+ className +" .wind-speed__val").text(wind);
             $("."+ className +" .sunrise__div").text(sunrise);
-            $("."+ className +" .sunset__div").text(sunset);
+            $("."+ className +" .weather__image").css("background", "url('image/Weather-icons/"+text+".svg') no-repeat" );
             //
             $("."+className). css("background", backgroundImg );
             $("."+className). css("background-size", "cover" );
