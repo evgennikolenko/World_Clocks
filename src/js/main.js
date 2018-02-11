@@ -26,11 +26,14 @@ window.addEventListener('load', function () {
 
     console.log("localStorageData: ", localStorageData);
     for( var i in localStorageData){
+        if ( i === 'length') break;
         var storageObj = localStorageData[i] ;
          var storageItem = JSON.parse(storageObj);
          console.log('storageItem: ', storageItem);
+         // if ( storageItem === 0) break;
 
          for( var key in storageItem) {
+
              var cityNameFromStorage = storageItem[key];
              // sync request on jahoo
              var searchtext = "select%20*%20from%20weather.forecast%20where%20woeid%20in%20" +
@@ -105,7 +108,10 @@ window.addEventListener('load', function () {
 
         // check for a repeat of the clock
         for( var i in localStorageData) {
+            if ( i === 'length') break;
             var storageObj = localStorageData[i],storageItem = JSON.parse(storageObj);
+
+
             if(getDataAttr === storageItem.className){
                var resQuest = confirm("Часы в этом городе уже есть! Всеравно продолжить?");
                 if (resQuest === false){
